@@ -40,6 +40,7 @@ spec:
         matchNames:
           - database
           - default
+          - flux-system
           - kube-system
           - monitoring
           - storage
