@@ -47,7 +47,7 @@ spec:
         maxParallel: 8
       destinationPath: s3://postgresql/
       endpointURL: "http://192.168.1.169:9000"
-      serverName: &currentCluster postgres16-v2
+      serverName: &currentCluster postgres16-v3
       s3Credentials:
         accessKeyId:
           name: cloudnative-pg-secret
