@@ -1,3 +1,3 @@
 for deletion
 
-https://rook.io/latest/Storage-Configuration/ceph-teardown/
+https://github.com/rook/rook/blob/master/Documentation/Storage-Configuration/ceph-teardown.md
