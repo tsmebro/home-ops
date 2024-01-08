@@ -1,3 +1,3 @@
 for deletion
 
-https://github.com/rook/rook/blob/master/Documentation/Storage-Configuration/ceph-teardown.md
+https://rook.io/docs/rook/v1.11/Getting-Started/ceph-teardown/#zapping-devices

@@ -39,7 +39,7 @@ spec:
   dependsOn:
     - name: paperless-redis
     - name: rook-ceph-cluster
-#    - name: volsync
+    - name: volsync
     - name: external-secrets-stores
 #  postBuild:
 #    substitute:
