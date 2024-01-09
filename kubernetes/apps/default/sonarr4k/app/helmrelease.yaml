@@ -102,7 +102,7 @@ spec:
         annotations:
           hajimari.io/icon: mdi:television-classic
         hosts:
-          - host: &host "sonarr-4k.${SECRET_DOMAIN}"
+          - host: &host "sonarr4k.${SECRET_DOMAIN}"
             paths:
               - path: /
                 service:
