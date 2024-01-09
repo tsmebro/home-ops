@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Secret
+metadata:
+    name: cf-lb-token-secret
+    namespace: cert-manager
+type: Opaque
+stringData:
+    api-token: ENC
