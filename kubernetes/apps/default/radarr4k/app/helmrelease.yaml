@@ -102,7 +102,7 @@ spec:
         annotations:
           hajimari.io/icon: mdi:filmstrip
         hosts:
-          - host: &host "radarr-4k.${SECRET_DOMAIN}"
+          - host: &host "radarr4k.${SECRET_DOMAIN}"
             paths:
               - path: /
                 service:
