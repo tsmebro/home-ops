@@ -5,4 +5,24 @@ metadata:
     namespace: cert-manager
 type: Opaque
 stringData:
-    api-token: ENC
+    api-token: ENC[AES256_GCM,data:f0ezu+mDorjou87yhvaBK6JDSeEkZJxZHrvLw6E0FA6uodIs4/kQjg==,iv:moh8p+p7ErIL92XszwMAu32i7A5ySrPnwfDhxdMISGw=,tag:dIR3huqp05yeivzKCt7A3Q==,type:str]
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1jqf2aadn2pt923ahgl54q8sklnf5up9rxphzzufkuwlv4ut6asvqpyck32
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSA1R0J0c1hYeTJTUDRLTGdh
+            NGtUbzdsblp0ait3bnJEWFlTVkhYcGZoLzJJCnpaaG84U3RwODNkdGM4NFFaREJB
+            MTQwcURZVHZpcU04U0VXdk9jd1pJdFkKLS0tIFVTeUpLUnJoa2NYa1RSb1RWTmlH
+            aHZBRXM4TFY1Y3NBZHVaa1J0NitZQUUKAQG/9yWd9frt0gLNzUU3yyGg8hLmEdZd
+            DXqnh+VGYLBOMdjuj+U8O62Zm9srY/x76dYaIUTGPnnhzLDSV9o4fQ==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2024-01-09T10:59:09Z"
+    mac: ENC[AES256_GCM,data:3eI7B5Drz74ll8lIBrkj72FRX6Gr6mvRRUNM1o6fRtb+Rz9JKzaFMO+zYK3wJmP9zlO41ydci0SuaBdHCYDjeqV23li+6uSYcHvY2qmea7OhQvoqMlpDUrPIdaZqR/dYWeySsq70ZuodEFAMwTuxNcvrbpv0aHVKAuejtSIE09c=,iv:W1yfGsbw3ldpoTESLVtEYvhfZrQpCozQvndgw6zMIUo=,tag:ZbRn+qr3F/lwQNlJxwgJBA==,type:str]
+    pgp: []
+    encrypted_regex: ^(data|stringData)$
+    version: 3.7.3
