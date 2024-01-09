@@ -3,7 +3,7 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta2
 kind: HelmRelease
 metadata:
-  name: sonarr
+  name: sonarr4k
 spec:
   interval: 30m
   chart:
@@ -38,7 +38,7 @@ spec:
               tag: 16
             envFrom: &envFrom
               - secretRef:
-                  name: sonarr-secret
+                  name: sonarr4k-secret
         containers:
           main:
             image:
@@ -51,7 +51,7 @@ spec:
 #              PUSHOVER_DEBUG: "false"
               SONARR__AUTHENTICATION_METHOD: External
               SONARR__AUTHENTICATION_REQUIRED: DisabledForLocalAddresses
-              SONARR__INSTANCE_NAME: Sonarr
+              SONARR__INSTANCE_NAME: Sonarr4k
               SONARR__PORT: &port 80
               SONARR__LOG_LEVEL: info
               SONARR__THEME: dark
@@ -102,7 +102,7 @@ spec:
         annotations:
           hajimari.io/icon: mdi:television-classic
         hosts:
-          - host: &host "sonarr.${SECRET_DOMAIN}"
+          - host: &host "sonarr-4k.${SECRET_DOMAIN}"
             paths:
               - path: /
                 service:
@@ -114,7 +114,7 @@ spec:
     persistence:
       config:
         enabled: true
-        existingClaim: sonarr-config
+        existingClaim: sonarr4k-config
 #      pushover-notify:
 #        type: configMap
 #        name: sonarr-configmap
