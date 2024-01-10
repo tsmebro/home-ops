@@ -1,39 +1,39 @@
 apiVersion: cert-manager.io/v1
 kind: ClusterIssuer
 metadata:
-  name: lb-production
+  name: br-production
 spec:
   acme:
     server: https://acme-v02.api.letsencrypt.org/directory
     email: "${SECRET_ACME_EMAIL}"
     privateKeySecretRef:
-      name: lb-production
+      name: br-production
     solvers:
       - dns01:
           cloudflare:
             apiTokenSecretRef:
-              name: cf-lb-token-secret
+              name: br-cf-token-secret
               key: api-token
         selector:
           dnsZones:
-            - "${LINS_SECRET_DOMAIN}"
+            - "${BR_SECRET_DOMAIN}"
 ---
 apiVersion: cert-manager.io/v1
 kind: ClusterIssuer
 metadata:
-  name: lb-staging
+  name: br-staging
 spec:
   acme:
     server: https://acme-staging-v02.api.letsencrypt.org/directory
     email: "${SECRET_ACME_EMAIL}"
     privateKeySecretRef:
-      name: lb-staging
+      name: br-staging
     solvers:
       - dns01:
           cloudflare:
             apiTokenSecretRef:
-              name: cf-lb-token-secret
+              name: br-cf-token-secret
               key: api-token
         selector:
           dnsZones:
-            - "${SECRET_DOMAIN}"
+            - "${BR_SECRET_DOMAIN}"

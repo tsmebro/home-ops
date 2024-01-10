@@ -6,3 +6,5 @@ resources:
   - ./issuers.yaml
   - ./lb-cf-token.sops.yaml
   - ./lb-issuers.yaml
+  - ./br-cf-token.sops.yaml
+  - ./br-issuers.yaml
