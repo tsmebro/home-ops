@@ -4,5 +4,5 @@ kind: Kustomization
 resources:
   - ./secret.sops.yaml
   - ./issuers.yaml
-  - ./lb-cf-token.sops.yaml
-  - ./lb-issuers.yaml
+#  - ./lb-cf-token.sops.yaml
+#  - ./lb-issuers.yaml
