@@ -6,3 +6,5 @@ resources:
   - ./production.yaml
   - ./lb-staging.yaml
 #  - ./lb-production.yaml
+  - ./br-staging.yaml
+#  - ./br-production.yaml
