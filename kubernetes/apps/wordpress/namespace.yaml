@@ -5,3 +5,4 @@ metadata:
   name: wordpress
   labels:
     kustomize.toolkit.fluxcd.io/prune: disabled
+    app: kubed # Define namespace label for kubed

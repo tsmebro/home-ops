@@ -1,0 +1,33 @@
+---
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: wp-data-pv
+spec:
+  capacity:
+    storage: 25Gi
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteMany
+  claimRef:
+    namespace: wordpress
+    name: wp-data-pvc
+  csi:
+    driver: driver.longhorn.io
+    fsType: ext4
+    volumeHandle: wp-0
+  storageClassName: longhorn
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: wp-data-pvc
+  namespace: wordpress
+spec:
+  accessModes:
+    - ReadWriteMany
+#  storageClassName: longhorn
+  resources:
+    requests:
+      storage: 25Gi
+  volumeName: "wp-data-pv"
