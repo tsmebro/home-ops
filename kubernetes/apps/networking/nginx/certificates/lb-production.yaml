@@ -9,6 +9,9 @@ spec:
   issuerRef:
     name: lb-production
     kind: ClusterIssuer
+  secretTemplate:
+    annotations:
+      kubed.appscode.com/sync: "app=kubed" # Sync certificate to matching namespace
   commonName: "${LINS_SECRET_DOMAIN}"
   dnsNames:
     - "${LINS_SECRET_DOMAIN}"
