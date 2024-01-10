@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: Secret
+metadata:
+    name: br-cf-token-secret
+stringData:
+    api-token: ENC[AES256_GCM,data:EFfU9uurqpS3eHMr5Rv9noujN1zkSyfUvQyYGBBd3GHmMicarwQaWw==,iv:UrbEql3VY68M5ut09qtdvWFwVZavJDFdrntTlAU8V98=,tag:wFWMNaEjVqohhdZyN9UKgw==,type:str]
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1jqf2aadn2pt923ahgl54q8sklnf5up9rxphzzufkuwlv4ut6asvqpyck32
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSA1R0J0c1hYeTJTUDRLTGdh
+            NGtUbzdsblp0ait3bnJEWFlTVkhYcGZoLzJJCnpaaG84U3RwODNkdGM4NFFaREJB
+            MTQwcURZVHZpcU04U0VXdk9jd1pJdFkKLS0tIFVTeUpLUnJoa2NYa1RSb1RWTmlH
+            aHZBRXM4TFY1Y3NBZHVaa1J0NitZQUUKAQG/9yWd9frt0gLNzUU3yyGg8hLmEdZd
+            DXqnh+VGYLBOMdjuj+U8O62Zm9srY/x76dYaIUTGPnnhzLDSV9o4fQ==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2024-01-10T01:51:58Z"
+    mac: ENC[AES256_GCM,data:h2kn2+EM0a8kONMY4NmjyxVDCFgTXwTl9f7XttC3Dq1YuRjwPqB8hECdEWimzmizc0cizmHUv7YrHAdv+sseLtVgMdXfUBYIaQ083E2sQ2ltfsODzTbnov4d5RS6gmdGstSujlu9mPWbuX4oELpsqY+IQB7EZpYXRxocp+S1Kvw=,iv:4U1K5pJE7vuu9Pv7Hzs3xWe2x6C4p7s8qg19tfko2Yo=,tag:lCjijfCvnlY0QUahhUqtMA==,type:str]
+    pgp: []
+    encrypted_regex: ^(data|stringData)$
+    version: 3.7.3

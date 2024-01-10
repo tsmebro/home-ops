@@ -36,4 +36,4 @@ spec:
               key: api-token
         selector:
           dnsZones:
-            - "${LINS_SECRET_DOMAIN}"
+            - "${SECRET_DOMAIN}"

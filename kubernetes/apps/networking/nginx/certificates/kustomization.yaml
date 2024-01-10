@@ -4,5 +4,5 @@ kind: Kustomization
 resources:
   - ./staging.yaml
   - ./production.yaml
-#  - ./lb-staging.yaml
+  - ./lb-staging.yaml
 #  - ./lb-production.yaml
