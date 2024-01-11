@@ -1161,7 +1161,7 @@ spec:
           storageClass: ""
           accessModes:
             - ReadWriteOnce
-          size: 8Gi
+          size: 10Gi
     ## External Database Configuration
     ## All of these values are only used if `mariadb.enabled=false`
     ##

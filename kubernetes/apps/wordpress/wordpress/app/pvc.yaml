@@ -2,11 +2,11 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: wordpress-config-test
+  name: wordpress-data-test
   namespace: wordpress
 spec:
   accessModes: ["ReadWriteMany"]
   resources:
     requests:
-      storage: 25Gi
+      storage: 26Gi
   storageClassName: ceph-filesystem
