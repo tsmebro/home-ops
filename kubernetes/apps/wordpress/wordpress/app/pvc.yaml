@@ -10,14 +10,3 @@ spec:
     requests:
       storage: 25Gi
   storageClassName: ceph-filesystem
----
-apiVersion: v1
-kind: PersistentVolumeClaim
-metedata:
-  name: wordpress-database-test
-  namespace: wordpress
-spec:
-  accessModes: ["ReadWriteOnce"]
-  resources:
-    requests:
-      storage: 10Gi

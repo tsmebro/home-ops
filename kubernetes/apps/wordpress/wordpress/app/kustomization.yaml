@@ -5,5 +5,6 @@ resources:
 #- db-pass-secret.sops.yaml
 - ./wp-pass-secret.sops.yaml
 - ./pvc.yaml
+- ./db-pvc.yaml
 #- ./helmrelease.yaml
 #- ./ingress.yaml
