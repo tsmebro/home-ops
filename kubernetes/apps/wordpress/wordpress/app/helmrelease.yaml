@@ -766,7 +766,7 @@ spec:
       dataSource: {}
       ## @param persistence.existingClaim The name of an existing PVC to use for persistence
       ##
-      existingClaim: wordpress-test
+      existingClaim: wordpress-data-test
       ## @param persistence.selector Selector to match an existing Persistent Volume for WordPress data PVC
       ## If set, the PVC can't have a PV dynamically provisioned for it
       ## E.g.
@@ -1144,7 +1144,7 @@ spec:
       auth:
         rootPassword: admin
         database: bitnami_wordpress_test
-        username: bn_wordpress
+        username: br_wordpress
         password: admin_test
       ## MariaDB Primary configuration
       ##
