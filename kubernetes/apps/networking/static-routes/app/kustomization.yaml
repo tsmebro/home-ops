@@ -15,4 +15,5 @@ resources:
 #  - ./tdarr.yaml
 #  - ./tautulli.yaml
   - ./trashtorrents.yaml
+  - ./truenas.yaml
   - ./torrents.yaml
