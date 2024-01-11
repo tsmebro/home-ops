@@ -4,6 +4,6 @@ kind: Kustomization
 resources:
 #- db-pass-secret.sops.yaml
 - ./wp-pass-secret.sops.yaml
-- ./pvc.yaml
+#- ./pvc.yaml
 #- ./helmrelease.yaml
 #- ./ingress.yaml
