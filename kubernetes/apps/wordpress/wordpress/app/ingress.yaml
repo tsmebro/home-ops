@@ -10,10 +10,10 @@ spec:
   ingressClassName: internal
   tls:
   - hosts:
-    - "${SECRET_DOMAIN}"
-    secretName: ${LINS_SECRET_DOMAIN/./-}-production-tls
+    - "${BR_SECRET_DOMAIN}"
+    secretName: ${BR_SECRET_DOMAIN/./-}-production-tls
   rules:
-  - host: "${LINS_SECRET_DOMAIN}"
+  - host: "${BR_SECRET_DOMAIN}"
     http:
       paths:
       - path: /

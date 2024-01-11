@@ -8,7 +8,7 @@ metadata:
 spec:
   dependsOn:
     - name: nginx-internal
-    - name: rook-ceph
+    - name: cluste
 #    - name: cluster-apps-nginx
   path: ./kubernetes/apps/wordpress/wordpress/app
   prune: true

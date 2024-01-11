@@ -10,7 +10,7 @@ spec:
   chart:
     spec:
       chart: wordpress
-      version: 16.x.x
+      version: 19.x.x
       sourceRef:
         kind: HelmRepository
         name: bitnami
@@ -26,7 +26,7 @@ spec:
   uninstall:
     keepHistory: false
 #  dependsOn:
-#    - name: longhorn
+#    - name: rook-ceph
   values:
     global:
       imageRegistry: ""
@@ -93,7 +93,7 @@ spec:
     image:
       registry: docker.io
       repository: bitnami/wordpress
-      tag: 6.2.2-debian-11-r82
+      tag: 6.4.2-debian-11-r10
       digest: ""
       ## Specify a imagePullPolicy
       ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
@@ -140,7 +140,7 @@ spec:
     wordpressLastName: LastName
     ## @param wordpressBlogName Blog name
     ##
-    wordpressBlogName: lindseyb.me
+    wordpressBlogName: borchardsrock
     ## @param wordpressTablePrefix Prefix to use for WordPress database tables
     ##
     wordpressTablePrefix: wp_
@@ -151,7 +151,7 @@ spec:
     ## NOTE: useful if you use an external database that already contains WordPress data
     ## ref: https://github.com/bitnami/containers/tree/main/bitnami/wordpress#connect-wordpress-docker-container-to-an-existing-database
     ##
-    wordpressSkipInstall: true
+    wordpressSkipInstall: false
     ## @param wordpressExtraConfigContent Add extra content to the default wp-config.php file
     ## e.g:
     ## wordpressExtraConfigContent: |
@@ -252,9 +252,9 @@ spec:
     ##
     extraEnvVars:
       - name: WP_SITEURL
-        value: https://lindseyb.me
+        value: https://borchardsrock.site
       - name: WP_HOME
-        value: https://lindseyb.me
+        value: https://borchardsrock.site
       - name: PHP_MAX_INPUT_VARS
         value: "5000"
       - name: ALLOW_UNFILTERED_UPLOADS
@@ -291,7 +291,7 @@ spec:
     ## @param replicaCount Number of WordPress replicas to deploy
     ## NOTE: ReadWriteMany PVC(s) are required if replicaCount > 1
     ##
-    replicaCount: 3
+    replicaCount: 2
     ## @param updateStrategy.type WordPress deployment strategy type
     ## ref: https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#strategy
     ## NOTE: Set it to `Recreate` if you use a PV that cannot be mounted on multiple pods
@@ -435,7 +435,7 @@ spec:
     ##
     podSecurityContext:
       enabled: true
-      fsGroup: 1001
+      fsGroup: 1000
       seccompProfile:
         type: "RuntimeDefault"
     ## Configure Container Security Context (only main container)
@@ -449,7 +449,7 @@ spec:
     ##
     containerSecurityContext:
       enabled: true
-      runAsUser: 1001
+      runAsUser: 1000
       runAsNonRoot: true
       allowPrivilegeEscalation: false
       readOnlyRootFilesystem: false
@@ -766,7 +766,7 @@ spec:
       dataSource: {}
       ## @param persistence.existingClaim The name of an existing PVC to use for persistence
       ##
-      existingClaim: wordpress-data
+      existingClaim: wordpress-test
       ## @param persistence.selector Selector to match an existing Persistent Volume for WordPress data PVC
       ## If set, the PVC can't have a PV dynamically provisioned for it
       ## E.g.
@@ -1143,9 +1143,9 @@ spec:
       ##
       auth:
         rootPassword: admin
-        database: bitnami_wordpress
+        database: bitnami_wordpress_test
         username: bn_wordpress
-        password: admin
+        password: admin_test
       ## MariaDB Primary configuration
       ##
       primary:
