@@ -13,6 +13,7 @@ resources:
 #  - ./radarr.yaml
 #  - ./sabnzbd.yaml
 #  - ./sonarr.yaml
+  - ./syncthing.yaml
 #  - ./tdarr.yaml
 #  - ./tautulli.yaml
   - ./trashtorrents.yaml
