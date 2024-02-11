@@ -4,7 +4,7 @@ kind: Kustomization
 resources:
   - ./homepage.yaml
   - ./ha.yaml
-#  - ./immich.yaml
+  - ./immich.yaml
 #  - ./nextcloud.yaml
   - ./mealie.yaml
   - ./minio.yaml
