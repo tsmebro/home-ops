@@ -24,7 +24,7 @@ spec:
               service:
                 name: *app
                 port:
-                  number: 8666
+                  number: 11000
   tls:
     - hosts:
         - *host
@@ -43,7 +43,7 @@ spec:
   type: ClusterIP
   ports:
     - name: http
-      port: &port 8666
+      port: &port 11000
       protocol: TCP
       targetPort: *port
 ---
@@ -61,5 +61,5 @@ subsets:
       - ip: "192.168.1.222"
     ports:
       - name: http
-        port: 8666
+        port: 11000
         protocol: TCP
