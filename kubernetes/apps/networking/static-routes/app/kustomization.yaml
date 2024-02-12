@@ -5,7 +5,7 @@ resources:
   - ./homepage.yaml
   - ./ha.yaml
   - ./immich.yaml
-#  - ./nextcloud.yaml
+  - ./nextcloud.yaml
   - ./mealie.yaml
   - ./minio.yaml
 #  - ./overseerr.yaml
