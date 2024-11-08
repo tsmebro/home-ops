@@ -33,10 +33,10 @@ spec:
         action: replace
       - regex: cluster
         action: labeldrop
-      # Note: Bootstrap is needed when recovering from an existing cnpg >
-  bootstrap:
-    recovery:
-      source: &previousCluster postgres16-v1
+ # Note: Bootstrap is needed when recovering from an existing cnpg >
+#  bootstrap:
+#    recovery:
+#      source: &previousCluster postgres16-v1
   backup:
     retentionPolicy: 30d
     barmanObjectStore: &barmanObjectStore
