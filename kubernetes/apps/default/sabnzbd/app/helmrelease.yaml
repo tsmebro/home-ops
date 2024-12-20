@@ -37,7 +37,7 @@ spec:
           main:
             image:
               repository: ghcr.io/onedr0p/sabnzbd
-              tag: 4.2.1@sha256:c9f2577a9483ed1a53295ed6315f4ebfcf9e99507c1095f49b5bc2f0cf080179
+              tag: 4.4.1@sha256:4188d3c29c53de1018edcfd5dc2d0a0c7955b9a239b91ff6c859626abd3494dc
             env:
               TZ: ${TIMEZONE}
               SABNZBD__PORT: &port 80
